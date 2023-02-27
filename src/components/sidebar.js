@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -76,18 +77,18 @@ const PostBody = styled.p`
 `;
 
 const Sidebar = ({ selectedUser, onClose }) => {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/posts`)
-      .then((response) => {
-        setPosts(response.data.slice(0, 5)); // only show first 5 posts
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://jsonplaceholder.typicode.com/posts`)
+  //     .then((response) => {
+  //       setPosts(response.data.slice(0, 5)); // only show first 5 posts
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }, []);
   return (
     <Container open={Boolean(selectedUser)}>
       {selectedUser && (
@@ -108,7 +109,7 @@ const Sidebar = ({ selectedUser, onClose }) => {
             <SidebarButton onClick={onClose}>Close</SidebarButton>
           </SidebarContent>
 
-          <Sidebar>
+          {/* <Sidebar>
             <h3>Posts</h3>
             <ul>
               {posts.map((post) => (
@@ -118,7 +119,7 @@ const Sidebar = ({ selectedUser, onClose }) => {
                 </li>
               ))}
             </ul>
-          </Sidebar>
+          </Sidebar> */}
         </>
       )}
     </Container>

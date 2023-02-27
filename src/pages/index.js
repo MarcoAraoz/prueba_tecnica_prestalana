@@ -1,7 +1,9 @@
-
-import styled from 'styled-components';
-import UserList from '@/components/userList';
-import Card from '@/components/Card';
+import styled from "styled-components";
+import UserList from "@/components/UserList";
+import Card from "@/components/Card";
+import { useState } from "react";
+import axios from "axios";
+import Login from "@/components/Login";
 
 // const Container = styled.div`
 //   display: flex;
@@ -15,10 +17,11 @@ import Card from '@/components/Card';
 const Home = () => {
   return (
     <>
-    {/* <Container> */}
-      <h1>Welcome to My Website!</h1>
-      <UserList />
-    {/* </Container> */}
+      {/* <Container> */}
+      
+      <Login />
+      {/* <UserList /> */}
+      {/* </Container> */}
     </>
   );
 };

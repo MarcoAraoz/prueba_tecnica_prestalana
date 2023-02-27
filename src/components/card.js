@@ -50,6 +50,7 @@ const Card = ({ user, selected, onClick }) => {
   const handleSelect = () => {
     onClick(user);
   };
+  
 
   return (
     <Container>
